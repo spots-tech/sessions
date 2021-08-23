@@ -1,0 +1,48 @@
+{
+  "name": "@spots-tech/sessions",
+  "description": "A compact redis session manager that lets you create, fetch, update, refresh and kill sessions.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "test": "jest --config jest.config.json --passWithNoTests",
+    "build": "tsc",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test",
+    "version": "git add .",
+    "postversion": "git push && git push --tags"
+  },
+  "dependencies": {
+    "ioredis": "^4.27.8"
+  },
+  "devDependencies": {
+    "@types/ioredis": "^4.26.7",
+    "@types/jest": "^27.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.24.1",
+    "jest": "^27.0.6",
+    "redis-mock": "^0.56.3",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.3.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spots-tech/sessions"
+  },
+  "author": "Spots Technology <contato@spotstechnology.com> (https://spotstechnology.com)",
+  "keywords": [
+    "redis",
+    "session",
+    "sessions",
+    "spots"
+  ]
+}
